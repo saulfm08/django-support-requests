@@ -104,13 +104,19 @@ Staff Users and non-staff users are required to change the initial password
     ```
 
     Notes: Production mode doesn't provide the the Django Static files
+    
+___
 
-## Some screenshots
+## Some system's screenshots
+----
 1. Login Screen
-![Login Screen](./images/1_login_screen.png)
+
+    ![Login Screen](./images/1_login_screen.png)
 
 2. Password Change Screen
-![Login Screen](./images/2_password_change_screen.png)
+
+    ![Login Screen](./images/2_password_change_screen.png)
 
 3. Request form Screen
-![Login Screen](./images/3_request_form.png)
+
+    ![Login Screen](./images/3_request_form.png)
