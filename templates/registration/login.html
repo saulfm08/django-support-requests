@@ -1,0 +1,35 @@
+{% extends 'registration/base.html' %}
+{% block content %}
+
+<main class="form-signin">
+    <form id="login-form" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+      <img class="mb-4" src="https://<your logo goes here>.png" alt="" width="72" height="auto">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <div class="form-floating">
+        <input type="text" id="id_username" name="username" class="form-control" placeholder="Username">
+        <label for="id_username">Username</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <input type="password" id="id_password" name="password" class="form-control" placeholder="Password">
+        <label for="id_password">Password</label>
+      </div>
+  
+      <!--div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div-->
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p style="text-align: center;" class="mt-5 mb-5 text-muted">Copyright &copy; {% now "Y" %} Support Request Form .<br>All rights reserved.</p>
+      {% if form.errors %}
+      <div class="alert alert-danger" role="alert" style="text-align: center;">
+        ⚠️ Invalid Username or Password.
+      </div>
+      {% endif %}
+      <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+  </main>
+{% endblock %}

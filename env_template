@@ -1,0 +1,6 @@
+DEBUG=True
+PRIVATE_TOKEN=SomeTokenXYZ
+MS_TEAMS_WEBHOOK=https://some-ms-teams.webhook.office.com/webhookb2/xxxxx-yyyy-zzzz-mm-asdfghk/IncomingWebhook/asdfghjkl/abcdefg
+GITLAB_URL=https://gitlab.com/api/v4/projects/<prject-number>
+SLACK_WEBHOOK=https://slack.com/webhook
+ADMIN_PASS=SomePassXYZ

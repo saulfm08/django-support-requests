@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  django:
+    container_name: django
+    build: .
+    command: gunicorn django_project.wsgi:application  --certfile=django_proj.crt  --keyfile=django_proj.key --bind 0.0.0.0:8443 --access-logfile /code/log/access.log --error-logfile /code/log/error.log --capture-output
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    entrypoint: django_project/entrypoint.sh
+    networks:
+      - django
+networks:
+  django:
