@@ -54,7 +54,7 @@ Staff Users and non-staff users are required to change the initial password
     ```bash
     python manage.py createsuperuser
     ```
-    You can also ran the `create-certificate.sh` script to create a super user. The password is defined in the `.env` file by the `ADMIN_PASS` variable.
+    You can also ran the `entrypoint.sh` script to create a super user. The password is defined in the `.env` file by the `ADMIN_PASS` variable.
 
 9. Run the application locally using the Django Web Server; you can access it using the following url `http://<ip>:<port>/admin`, using the user and password defined in the previous step:
 
@@ -103,7 +103,15 @@ Staff Users and non-staff users are required to change the initial password
         --daemon
     ```
 
-    Notes: Production mode doesn't provide the the Django Static files
+#### Notes: 
+- Production mode doesn't provide the the Django Static files
+- When running Production in a dedicated server/vm, use `gunicorn.service` file to configure a service unit:
+    - move this file to `/etc/systemd/system/`
+    - edit the file
+    - replace all values to reflect your env
+- When running Production, use NGINX to avoid to expose `gunicorn` directly to the Internet; [read more here](https://docs.gunicorn.org/en/stable/deploy.html#nginx-configuration).
+- This project is just a Draft / Quick Start for similar requests; we are not responsibles for any kind of issues this can cause after any changes or misbehaviors/misfuncions.
+
     
 ___
 

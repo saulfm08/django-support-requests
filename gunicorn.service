@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=root    
+Group=root
+WorkingDirectory=/path/to/my/django_project/
+ExecStart=/path/to/my/python/virtual/env/bin/gunicorn django_project.wsgi:application --certfile=django_proj.crt --keyfile=django_proj.key --capture-output --bind 0.0.0.0:443
+
+[Install]
+WantedBy=multi-user.target
