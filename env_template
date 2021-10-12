@@ -4,3 +4,4 @@ MS_TEAMS_WEBHOOK=https://some-ms-teams.webhook.office.com/webhookb2/xxxxx-yyyy-z
 GITLAB_URL=https://gitlab.com/api/v4/projects/<prject-number>
 SLACK_WEBHOOK=https://slack.com/webhook
 ADMIN_PASS=SomePassXYZ
+DJANGO_SECRET_KEY="x!lg+pqn+@)2c73^%h3(w^9la4_^+r!#6=fm5^#h8(1z^=r99z"

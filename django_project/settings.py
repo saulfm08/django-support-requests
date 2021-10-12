@@ -25,7 +25,8 @@ env = environ.Env(DEBUG=(bool, False),)
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l3m=-(=6j41h*!$43axbtx&elala_+7e^ba#&e3!$4oxs_i$&k'
+DJANGO_SECRET_KEY = env('DJANGO_SECRET_KEY')
+SECRET_KEY = DJANGO_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG            = env('DEBUG')
@@ -33,7 +34,7 @@ PRIVATE_TOKEN    = env('PRIVATE_TOKEN')
 MS_TEAMS_WEBHOOK = env('MS_TEAMS_WEBHOOK')
 GITLAB_URL       = env('GITLAB_URL')
 ADMIN_PASS       = env('ADMIN_PASS')
-print(f"ln 36, settings.py,   Debug = {DEBUG}")
+print(f"ln 37, settings.py,   Debug = {DEBUG}")
 
 ALLOWED_HOSTS = ['*']
 
