@@ -109,7 +109,12 @@ Staff Users and non-staff users are required to change the initial password
     - move this file to `/etc/systemd/system/`
     - edit the file
     - replace all values to reflect your env
-- When running Production, use NGINX to avoid to expose `gunicorn` directly to the Internet; [read more here](https://docs.gunicorn.org/en/stable/deploy.html#nginx-configuration).
+    - after configuring the service unit, you can easily start use commands to start/stop like:
+        - `systemctl enable gunicorn`
+        - `systemctl start gunicorn`
+        - `systemctl status gunicorn`
+        - `systemctl stop gunicorn`
+- When running Production, we STRONGLY recommend to use NGINX to avoid to expose `gunicorn` directly to the Internet; [read more here](https://docs.gunicorn.org/en/stable/deploy.html#nginx-configuration).
 - This project is just a Draft / Quick Start for similar requests; we are not responsibles for any kind of issues this can cause after any changes or misbehaviors/misfuncions.
 
     
