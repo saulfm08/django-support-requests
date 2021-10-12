@@ -40,10 +40,10 @@ Staff Users and non-staff users are required to change the initial password
     ```
 6. Create a new Django Secrete Key, copy it and past on `env_tample` and than, apply the database migrations:
 
-    Generate new Django Secrete Key:
+    ⚠️ Generate new Django Secrete Key:
 
     ```bash
-    /get_random_secret_key.sh
+    ./get_random_secret_key.sh
     ```
 
     Note: copy the variable and value and past it on `env_template` and/or `.env` file.
