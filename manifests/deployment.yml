@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "appweu-ad34"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "appweu-ad34"
+  template:
+    metadata:
+      labels:
+        app: "appweu-ad34"
+    spec:
+      containers:
+        - name: "appweu-ad34"
+          image: "saulweu.azurecr.io/appweu"
+          ports:
+          - containerPort: 80
